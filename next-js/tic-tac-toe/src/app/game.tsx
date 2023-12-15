@@ -44,7 +44,8 @@ function BanCo({ xChoi, oChoi, onChoi }: BanCoProps) {
   return (
     <div className="ban-co">
       <div className="tinh-trang mb-4">{tinhTrang}</div>
-      <div className="grid grid-cols-5 gap-4">
+      <div className="grid grid-cols-5">
+      {/* <div className="grid grid-cols-5 gap-4"> */}
         {oChoi.map((giaTri, index) => (
           <OX key={index} giaTri={giaTri} onClick={() => xuLyClick(index)} />
         ))}
