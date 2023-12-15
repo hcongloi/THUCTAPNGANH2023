@@ -11,7 +11,7 @@ interface Task {
 
 
 export default function MyApp() {
- 
+
   const [tasks, setTasks] = useState<Task[]>([]);
   const [newTaskContent, setNewTaskContent] = useState<string>('');
   const [newTaskDescription, setNewTaskDescription] = useState<string>('');
@@ -33,7 +33,7 @@ export default function MyApp() {
     setShowAddTaskModal(false);
   };
 
- 
+
   const handleEditTask = (taskId: number) => {
     const taskToEdit = tasks.find((task) => task.id === taskId);
     if (taskToEdit) {
@@ -44,7 +44,7 @@ export default function MyApp() {
     }
   };
 
- 
+
   const handleSaveTask = (taskId: number) => {
     const updatedTasks = tasks.map((task) =>
       task.id === taskId ? { ...task, content: newTaskContent, description: newTaskDescription } : task
@@ -134,7 +134,7 @@ export default function MyApp() {
                       {/* Icon Due Date */}
                       <button
                         onClick={() => {
-              
+
                         }}
                         className="text-purple-500 px-2 py-1 rounded hover:bg-purple-200"
                       >
@@ -143,7 +143,7 @@ export default function MyApp() {
                       {/* Icon Priority */}
                       <button
                         onClick={() => {
-                        
+
                         }}
                         className="text-orange-500 px-2 py-1 rounded hover:bg-orange-200"
                       >
@@ -175,40 +175,40 @@ export default function MyApp() {
                 placeholder="Task Description"
               ></textarea>
               <div className="flex mb-4 border-b-2">
-                    <button
-                        onClick={() => {
-                          
-                        }}
-                        className="text-purple-500 px-2 py-1 m-1 border rounded hover:bg-purple-200"
-                      >
-                        📅 Today
-                      </button>
-                      {/* Icon Priority */}
-                      <button
-                        onClick={() => {
-                          
-                        }}
-                        className="text-orange-500 px-2 py-1 m-1 border rounded hover:bg-orange-200"
-                      >
-                        🚩 Priority
-                      </button>
-                      <button
-                        onClick={() => {
-                          
-                        }}
-                        className="text-orange-500 px-2 py-1 m-1 border rounded hover:bg-orange-200"
-                      >
-                        ⏰ Reminders <span className=" bg-orange-200  text-amber-800">PRO</span>
-                      </button>
-                      <button
-                        onClick={() => {
-                          
-                        }}
-                        className="text-orange-500 px-2 py-1 m-1 border rounded hover:bg-orange-200"
-                      >
-                        ...
-                      </button>
-                      </div>
+                <button
+                  onClick={() => {
+
+                  }}
+                  className="text-purple-500 px-2 py-1 m-1 border rounded hover:bg-purple-200"
+                >
+                  📅 Today
+                </button>
+                {/* Icon Priority */}
+                <button
+                  onClick={() => {
+
+                  }}
+                  className="text-orange-500 px-2 py-1 m-1 border rounded hover:bg-orange-200"
+                >
+                  🚩 Priority
+                </button>
+                <button
+                  onClick={() => {
+
+                  }}
+                  className="text-orange-500 px-2 py-1 m-1 border rounded hover:bg-orange-200"
+                >
+                  ⏰ Reminders <span className=" bg-orange-200  text-amber-800">PRO</span>
+                </button>
+                <button
+                  onClick={() => {
+
+                  }}
+                  className="text-orange-500 px-2 py-1 m-1 border rounded hover:bg-orange-200"
+                >
+                  ...
+                </button>
+              </div>
 
               <div className="flex justify-between mb-4">
                 <button
@@ -218,7 +218,7 @@ export default function MyApp() {
                   }}
                   className=" text-gray-700 px-4 py-2 rounded hover:bg-gray-200"
                 >
-                 📥 Inbox
+                  📥 Inbox
                 </button>
 
                 <div className="flex">
